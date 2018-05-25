@@ -50,6 +50,8 @@ public class PureCloudObjcClientCodegen extends ObjcClientCodegen {
     // set the output folder here
     outputFolder = "generated-code" + File.separator + "purecloudobjc";
 
+    classPrefix = "PCP"; // Use PureCloud Platform (PCP) prefix
+
     // /**
     //  * Models.  You can write model files using the modelTemplateFiles map.
     //  * if you want to create one template for file, you can do so here.

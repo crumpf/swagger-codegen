@@ -50,6 +50,9 @@ public class PureCloudSwift4ClientCodegen extends Swift4Codegen {
     // set the output folder here
     outputFolder = "generated-code" + File.separator + "purecloudswift4";
 
+    // Custom mappings and overrides for swagger type -> swift type
+    typeMapping.put("object", "JSON");
+
     // /**
     //  * Models.  You can write model files using the modelTemplateFiles map.
     //  * if you want to create one template for file, you can do so here.
@@ -148,5 +151,11 @@ public class PureCloudSwift4ClientCodegen extends Swift4Codegen {
   // public String apiFileFolder() {
   //   return outputFolder + "/" + sourceFolder + "/" + apiPackage().replace('.', File.separatorChar);
   // }
+
+  @Override
+  public String toEnumVarName(String name, String datatype) {
+      String enumVarName = super.toEnumVarName(name, datatype);
+      return enumVarName.replace("*", "Wildcard");
+  }
 
 }
