@@ -343,6 +343,9 @@ public class Swift4Codegen extends DefaultCodegen implements CodegenConfig {
         supportingFiles.add(new SupportingFile("gitignore.mustache",
                                                "",
                                                ".gitignore"));
+        supportingFiles.add(new SupportingFile("README.mustache",
+                                               "",
+                                               "README.md"));
 
     }
 
